@@ -2892,4 +2892,367 @@ p {
   display: none;
 }
 
+/* ==========================================================================
+   OPTIMIZACIÓN RESPONSIVA MÓVIL (SIN SCROLL HORIZONTAL EN CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Evitar desbordamientos y scroll horizontal */
+  .interactive-table-wrapper,
+  .culture-table-wrapper {
+    overflow-x: visible !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* Control de ingresos y monedas en móvil */
+  .income-control-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .income-input-wrapper {
+    max-width: 100% !important;
+  }
+  .currency-toggle-btns {
+    width: 100%;
+  }
+  .curr-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Leyenda de la barra de distribución */
+  .distribution-legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dist-segment-semilla,
+  .dist-segment-pan {
+    font-size: 0.72rem;
+    padding: 0 4px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 1. TABLA CALCULADORA PAN VS SEMILLA -> FORMATO TARJETAS VERTICALES */
+  #modulo-calculadora .calc-table {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  #modulo-calculadora .calc-table thead {
+    display: none !important; /* Ocultar cabeceras en móviles */
+  }
+
+  #modulo-calculadora .calc-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  #modulo-calculadora .calc-table tr {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 20px 16px !important;
+    gap: 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+
+  #modulo-calculadora .calc-table td {
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Categoría (Nombre) */
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(1) {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    border-bottom: 1px dashed #e5e7eb !important;
+    padding-bottom: 8px !important;
+    display: block !important;
+  }
+
+  /* Tipo de Recurso (Badge) */
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(2) {
+    justify-content: flex-start !important;
+  }
+
+  /* Porcentaje Sugerido */
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(3) {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.95rem !important;
+    color: #111827 !important;
+  }
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(3)::before {
+    content: "Porcentaje Sugerido:" !important;
+    font-size: 0.8rem !important;
+    color: #6b7280 !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+
+  /* Monto Calculado */
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(4) {
+    background: #f9fafb !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e5e7eb !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: right !important;
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+  }
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(4)::before {
+    content: "Monto Calculado:" !important;
+    font-size: 0.8rem !important;
+    color: #111827 !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+  }
+
+  /* Estrategia & Propósito */
+  #modulo-calculadora .calc-table tr:not(.highlight-total) td:nth-child(5) {
+    font-size: 0.88rem !important;
+    color: #4b5563 !important;
+    line-height: 1.5 !important;
+    padding-top: 8px !important;
+    border-top: 1px dashed #e5e7eb !important;
+    display: block !important;
+  }
+
+  /* Fila Total Asignado (Highlight) */
+  #modulo-calculadora .calc-table tr.highlight-total {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 2px solid #111827 !important;
+    gap: 12px !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td {
+    color: #ffffff !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(1) {
+    color: #ffffff !important;
+    font-size: 1.15rem !important;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25) !important;
+    padding-bottom: 8px !important;
+    display: block !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(2) {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(2)::before {
+    content: "Porcentaje Total:" !important;
+    font-size: 0.8rem !important;
+    color: #9ca3af !important;
+    text-transform: uppercase !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(3) {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(3)::before {
+    content: "Total Calculado:" !important;
+    font-size: 0.8rem !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+  }
+  #modulo-calculadora .calc-table tr.highlight-total td:nth-child(4) {
+    color: #9ca3af !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.25) !important;
+    padding-top: 6px !important;
+    display: block !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* 2. TABLA GASTOS HORMIGA (#leaksTable) -> FORMATO TARJETAS VERTICALES */
+  #leaksTable {
+    display: block !important;
+    width: 100% !important;
+  }
+  #leaksTable thead {
+    display: none !important;
+  }
+  #leaksTable tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+  #leaksTable tr.leak-row {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 20px 16px !important;
+    gap: 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+    position: relative !important;
+  }
+  #leaksTable td {
+    padding: 0 !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+  #leaksTable td:nth-child(1)::before {
+    content: "Descripción del Gasto:" !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #6b7280 !important;
+  }
+  #leaksTable td:nth-child(2)::before {
+    content: "Frecuencia al Mes (Veces):" !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #6b7280 !important;
+  }
+  #leaksTable td:nth-child(3)::before {
+    content: "Costo por Unidad:" !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #6b7280 !important;
+  }
+  #leaksTable td:nth-child(4) {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    background: #f9fafb !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid #e5e7eb !important;
+    font-size: 1rem !important;
+  }
+  #leaksTable td:nth-child(4)::before {
+    content: "Gasto Mensual:" !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #111827 !important;
+  }
+  #leaksTable td:nth-child(5) {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    background: #f3f4f6 !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid #d1d5db !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+  }
+  #leaksTable td:nth-child(5)::before {
+    content: "Gasto Anual:" !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #111827 !important;
+  }
+  #leaksTable td:nth-child(6)::before {
+    content: "Plan de Acción / Sustitución:" !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #6b7280 !important;
+  }
+  #leaksTable td:nth-child(7) {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+  }
+  #leaksTable td:nth-child(7) .btn-delete-row {
+    font-size: 1.4rem !important;
+    padding: 2px 8px !important;
+    background: #f3f4f6 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 3. TABLA MENTALIDAD RUINA VS REINO EN CELULARES */
+  .culture-table {
+    display: block !important;
+    width: 100% !important;
+  }
+  .culture-table thead {
+    display: none !important;
+  }
+  .culture-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  .culture-table tr {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: var(--radius-md) !important;
+    padding: 16px !important;
+    gap: 10px !important;
+  }
+  .culture-table td {
+    padding: 0 !important;
+    border: none !important;
+    font-size: 0.9rem !important;
+  }
+  .culture-table td:nth-child(1)::before {
+    content: "❌ Mentalidad de Ruina: " !important;
+    font-weight: 700 !important;
+    color: #6b7280 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+  }
+  .culture-table td:nth-child(2) {
+    background: #f9fafb !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    border-left: 3px solid #111827 !important;
+  }
+  .culture-table td:nth-child(2)::before {
+    content: "👑 Cultura del Reino: " !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+  }
+}
+
+
 
