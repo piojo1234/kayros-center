@@ -1333,36 +1333,51 @@ p {
   border-color: rgba(27, 67, 147, 0.3);
 }
 
-/* Institutional / Academic Badge */
-.academic-badge {
+/* Institutional / Academic Badges */
+.academic-badges-container {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 14px 18px;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 22px;
 }
 
-.academic-badge .uchile-seal {
-  width: 36px;
+.academic-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+}
+
+.academic-badge:hover {
+  background: #ffffff;
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.academic-badge .uchile-seal,
+.academic-badge .badge-logo-img {
+  width: auto;
   height: auto;
-  max-height: 48px;
+  max-width: 58px;
+  max-height: 38px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
 .academic-badge .psychology-icon {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   background: rgba(27, 67, 147, 0.12);
   color: #1B4393;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   flex-shrink: 0;
 }
 

@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const message = `¡Hola Kayros Center! 👋 Mi nombre es ${name}. Planeo visitarlos ${date} con ${guests} acompañante(s). Niños para Kayros Kids: ${kids}. ¡Nos vemos allá!`;
       const encodedMsg = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/573112819003?text=${encodedMsg}`;
+      const whatsappUrl = `https://wa.me/573143822103?text=${encodedMsg}`;
 
       window.open(whatsappUrl, '_blank');
     });
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const message = `¡Hola Kayros Center! 📖 Deseo realizar mi pre-inscripción en la Escuela de Estudio Teológico Teosuperación.\n\n👤 Nombre: ${name}\n🎯 Nivel de Interés: ${level}\n📘 Material: ${guide}\n\nQuedo atento a la confirmación de fechas y entrega de guía. ¡Muchas gracias!`;
       const encodedMsg = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/573112819003?text=${encodedMsg}`;
+      const whatsappUrl = `https://wa.me/573143822103?text=${encodedMsg}`;
 
       window.open(whatsappUrl, '_blank');
     });
