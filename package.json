@@ -1,0 +1,19 @@
+{
+  "name": "kayros-center-web",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de la Iglesia Cristiana Kayros Center Villavicencio",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Sitio estático listo para producción'"
+  },
+  "keywords": [
+    "kayros-center",
+    "iglesia",
+    "villavicencio",
+    "teosuperacion",
+    "finanzas-biblicas"
+  ],
+  "author": "piojo1234",
+  "license": "MIT"
+}

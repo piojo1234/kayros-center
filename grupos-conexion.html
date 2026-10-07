@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos de Conexión & Ministerios | Kayros Center - Villavicencio</title>
+  <meta name="description" content="Encuentra tu grupo de conexión en tu barrio y comuna en Villavicencio. Conoce también nuestros ministerios de interés: Warriors, Finanzas, Familias, Juvenil, Women y Hombres.">
+  <meta name="keywords" content="Grupos de Conexion Villavicencio, Barrios Villavicencio Celulas Cristianas, Iglesia Cristiana Comunas Villavicencio, Warriors Kayros, Finanzas Kayros, Matrimonios Inseparables, Kayros Women">
+  <link rel="canonical" href="https://kayroscenter.com/grupos-conexion.html">
+  <link rel="icon" type="image/png" href="assets/images/isotipo-dark.png">
+
+  <!-- ================= GEO TAGS (Local SEO & AI Discovery) ================= -->
+  <meta name="geo.region" content="CO-MET">
+  <meta name="geo.placename" content="Villavicencio, Meta, Colombia">
+  <meta name="geo.position" content="4.1420;-73.6266">
+  <meta name="ICBM" content="4.1420, -73.6266">
+  <meta name="city" content="Villavicencio">
+  <meta name="country" content="Colombia">
+  <meta name="postal-code" content="500001">
+
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:url" content="https://kayroscenter.com/grupos-conexion.html">
+  <meta property="og:site_name" content="Kayros Center Villavicencio">
+  <meta property="og:title" content="Grupos de Conexión & Ministerios | Kayros Center Villavicencio">
+  <meta property="og:description" content="En todas las comunas y en cada barrio de Villavicencio hay un grupo para ti. Encuentra amigos de fe cerca a tu casa.">
+  <meta property="og:image" content="assets/images/hero-banner-1.jpg">
+
+  <!-- ================= SCHEMA.ORG JSON-LD ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Grupos de Conexión y Ministerios Kayros Center",
+    "description": "Buscador de grupos de conexión por comunas y barrios en Villavicencio, y ministerios especializados.",
+    "url": "https://kayroscenter.com/grupos-conexion.html",
+    "isPartOf": {
+      "@type": "Church",
+      "name": "Kayros Center Villavicencio",
+      "address": "Centro Comercial Marandúa, Piso 3, Villavicencio, Colombia"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="assets/images/logo-dark.png" alt="Kayros Center Logo" class="logo-img">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="planifica-tu-visita.html" class="nav-link">Planifica tu Visita</a></li>
+        <li><a href="index.html#pastores" class="nav-link">Nuestros Pastores</a></li>
+        <li><a href="teosuperacion.html" class="nav-link">Teosuperación</a></li>
+        <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+        <li><a href="grupos-conexion.html" class="nav-link active">Grupos de Conexión</a></li>
+        <li><a href="mensajes.html" class="nav-link">Mensajes</a></li>
+        <li><a href="sedes.html" class="nav-link">Sedes</a></li>
+        <li><a href="dar.html" class="nav-link">Generosidad</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="#buscador-barrios" class="btn btn-primary btn-sm">Buscar mi barrio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" style="min-height: 52vh; padding-top: 50px;">
+    <div class="container hero-content">
+      <div class="eyebrow-pill">VIDA EN COMUNIDAD POR TODA LA CIUDAD</div>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.4rem);">Hay un grupo de conexión cerca de tu casa.</h1>
+      <p class="hero-subtitle">
+        En Villavicencio estamos presentes en todas las comunas y en cada barrio contamos con más de un grupo activo. Además, tenemos ministerios de interés con actividades específicas para cada etapa de tu vida.
+      </p>
+      <div class="btn-group hero-actions">
+        <a href="#buscador-barrios" class="btn btn-primary">Buscar grupo por barrio</a>
+        <a href="#ministerios-interes" class="btn btn-outline">Ver ministerios de interés</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PARTE 1: BUSCADOR POR BARRIO Y COMUNA ================= -->
+  <section class="section section-subtle" id="buscador-barrios">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow-pill">LOCALIZADOR EN VILLAVICENCIO</div>
+        <h2>Encuentra el grupo más cercano en tu barrio</h2>
+        <p>Escribe el nombre de tu barrio o selecciona tu comuna para ver los anfitriones y horarios disponibles.</p>
+      </div>
+
+      <!-- Controles de Búsqueda Interactiva -->
+      <div class="search-controls">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input 
+            type="text" 
+            id="groupSearchInput" 
+            class="search-input" 
+            placeholder="Escribe tu barrio (Ej: Barzal, La Grama, Buque, Esperanza, Porfía, Jordan...)"
+            aria-label="Buscar grupo por barrio">
+        </div>
+
+        <div class="comuna-select-wrapper">
+          <select id="comunaSelect" class="comuna-select" aria-label="Filtrar por comuna">
+            <option value="all">Todas las Comunas</option>
+            <option value="1">Comuna 1 (Galán, Barzal Alto, Mesetas...)</option>
+            <option value="2">Comuna 2 (Barzal, Buque, La Grama, Siete de Agosto...)</option>
+            <option value="3">Comuna 3 (San Isidro, Santa Inés, Porvenir...)</option>
+            <option value="4">Comuna 4 (Morichal, Santa Helena, Jordan...)</option>
+            <option value="5">Comuna 5 (La Esperanza, Villa Bolívar, Popular...)</option>
+            <option value="6">Comuna 6 (San Benito, Cantarrana...)</option>
+            <option value="7">Comuna 7 (Rosa Blanca, La Vega, Catumare...)</option>
+            <option value="8">Comuna 8 (Porfía, Playa Rica, Montecarlo...)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Grupos por Barrio -->
+      <div class="card-grid-3" id="groupsGrid">
+
+        <!-- Comuna 2: Barzal -->
+        <div class="feature-card group-card-item" data-barrio="barzal" data-comuna="2" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 2</span>
+            <h3>Barrio Barzal</h3>
+            <p style="margin-bottom: 14px;">Reunión en casa con café fresco, tiempo de oración y estudio práctico de la semana.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Sector Clínicas / Cra. 39</li>
+              <li>⏰ <strong>Horario:</strong> Miércoles 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Grupo Mixto / Familias</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20el%20Barrio%20Barzal%20y%20quiero%20asistir%20al%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 2: El Buque -->
+        <div class="feature-card group-card-item" data-barrio="buque el buque" data-comuna="2" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 2</span>
+            <h3>Barrio El Buque</h3>
+            <p style="margin-bottom: 14px;">Espacio de conversación franca sobre los desafíos cotidianos, fe y crecimiento personal.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Cerca a Primavera Urbana</li>
+              <li>⏰ <strong>Horario:</strong> Jueves 7:30 PM</li>
+              <li>👥 <strong>Formato:</strong> Profesionales & Parejas</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20El%20Buque%20y%20quiero%20asistir%20al%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 2: La Grama -->
+        <div class="feature-card group-card-item" data-barrio="la grama grama" data-comuna="2" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 2</span>
+            <h3>Barrio La Grama</h3>
+            <p style="margin-bottom: 14px;">Ambiente acogedor en cafetería para compartir la Palabra y crear amistades duraderas.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Sector Gastronómico / Plaza</li>
+              <li>⏰ <strong>Horario:</strong> Martes 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Grupo Mixto</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20La%20Grama%20y%20quiero%20asistir%20al%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 5: La Esperanza -->
+        <div class="feature-card group-card-item" data-barrio="la esperanza esperanza etapa 1 etapa 2 etapa 3" data-comuna="5" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 5</span>
+            <h3>Barrio La Esperanza</h3>
+            <p style="margin-bottom: 14px;">Múltiples casas abiertas en las etapas 1, 2 y 3 para que nunca te falte un punto cercano.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Cercano al Polideportivo</li>
+              <li>⏰ <strong>Horario:</strong> Miércoles 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Familias & Vecinos</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20La%20Esperanza%20y%20quiero%20conocer%20el%20grupo%20m%C3%A1s%20cercano" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 4: El Jordan & Morichal -->
+        <div class="feature-card group-card-item" data-barrio="el jordan jordan morichal santa helena" data-comuna="4" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 4</span>
+            <h3>El Jordán & Morichal</h3>
+            <p style="margin-bottom: 14px;">Comunidad activa entre semana con dinámicas familiares y apoyo continuo.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Sector Cuarta Etapa</li>
+              <li>⏰ <strong>Horario:</strong> Jueves 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Grupo Mixto</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20estoy%20en%20el%20sector%20Jord%C3%A1n/Morichal%20y%20quiero%20asistir" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 8: Ciudad Porfía -->
+        <div class="feature-card group-card-item" data-barrio="porfia ciudad porfia playa rica montecarlo" data-comuna="8" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 8</span>
+            <h3>Ciudad Porfía & Montecarlo</h3>
+            <p style="margin-bottom: 14px;">Red de grupos en el sur de la ciudad con cálida acogida a personas y familias nuevas.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Eje Principal Porfía</li>
+              <li>⏰ <strong>Horario:</strong> Miércoles 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Familias & Jóvenes</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20Porf%C3%ADa/Montecarlo%20y%20quiero%20unirme%20a%20un%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 1: Galán & Barzal Alto -->
+        <div class="feature-card group-card-item" data-barrio="galan barzal alto mesetas santander" data-comuna="1" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 1</span>
+            <h3>Barrio Galán & Alrededores</h3>
+            <p style="margin-bottom: 14px;">Grupos dedicados a fortalecer los lazos de vecindad y orar por las necesidades del hogar.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Sector Galán</li>
+              <li>⏰ <strong>Horario:</strong> Martes 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Grupo Mixto</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20estoy%20en%20el%20Barrio%20Gal%C3%A1n%20y%20quiero%20un%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 7: Rosa Blanca & Catumare -->
+        <div class="feature-card group-card-item" data-barrio="rosa blanca catumare la vega" data-comuna="7" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 7</span>
+            <h3>Rosa Blanca & Catumare</h3>
+            <p style="margin-bottom: 14px;">Puntos de reunión con anfitriones listos para recibirte con calidez y respeto.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Sector Multifamiliares</li>
+              <li>⏰ <strong>Horario:</strong> Jueves 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Parejas & Jóvenes</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20vivo%20en%20Rosa%20Blanca/Catumare%20y%20busco%20un%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+        <!-- Comuna 3: San Isidro & Santa Inés -->
+        <div class="feature-card group-card-item" data-barrio="san isidro santa ines porvenir" data-comuna="3" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="tag-comuna">COMUNA 3</span>
+            <h3>San Isidro & Porvenir</h3>
+            <p style="margin-bottom: 14px;">Reuniones semanales para compartir la Palabra en un entorno relajado y familiar.</p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+              <li>📍 <strong>Zona:</strong> Cerca a Carrera 30</li>
+              <li>⏰ <strong>Horario:</strong> Miércoles 7:00 PM</li>
+              <li>👥 <strong>Formato:</strong> Grupo Mixto</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20estoy%20en%20San%20Isidro%20y%20quiero%20un%20grupo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            Conectar por WhatsApp →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mensaje cuando no hay resultados de búsqueda -->
+      <div id="noResultsMessage" style="display: none; background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 40px; text-align: center; margin-top: 30px;">
+        <h3 style="margin-bottom: 8px;">¿No ves tu barrio en esta lista?</h3>
+        <p style="max-width: 600px; margin: 0 auto 20px;">
+          Villavicencio tiene cientos de barrios y en cada uno tenemos más de un grupo funcionando. Escríbenos por WhatsApp con tu dirección o barrio y te asignamos el anfitrión más cercano en minutos.
+        </p>
+        <a href="https://wa.me/573112819003?text=Hola!%20No%20encontr%C3%A9%20mi%20barrio%20en%20la%20p%C3%A1gina.%20Vivo%20en%20..." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          Asignarme mi grupo por WhatsApp ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PARTE 2: MINISTERIOS DE INTERÉS ================= -->
+  <section class="section" id="ministerios-interes">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow-pill">REDES & COMUNIDADES ESPECIALIZADAS</div>
+        <h2>Ministerios de Interés en Kayros Center</h2>
+        <p>Espacios y actividades diseñadas según tu momento vital, vocación y desafíos cotidianos.</p>
+      </div>
+
+      <div class="card-grid-3">
+
+        <!-- 1. Warriors -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">SUPERVISIÓN JOVEN & ADULTA</span>
+            <h3>Warriors</h3>
+            <span class="sub-program">Universitarios & Profesionales</span>
+            <p style="margin-bottom: 16px;">
+              La red que impulsa a universitarios, recién graduados y profesionales jóvenes a liderar con excelencia, afirmar su identidad en Cristo y tomar decisiones sabias en su carrera y vida personal.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>⚡ <strong>Actividades:</strong> Noches de conexión, foros de vocación y mentoría.</li>
+              <li>👥 <strong>Público:</strong> Estudiantes y profesionales.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20quiero%20conectar%20con%20la%20red%20Warriors" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Unirme a Warriors →
+          </a>
+        </div>
+
+        <!-- 2. Ministerio de Finanzas -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">EMPRENDIMIENTO & EMPRESA</span>
+            <h3>Ministerio de Finanzas</h3>
+            <span class="sub-program">Emprendedores & Empresarios</span>
+            <p style="margin-bottom: 16px;">
+              Un espacio dedicado a equipar a dueños de negocios, comerciantes y emprendedores con principios bíblicos de mayordomía, economía sana, ética comercial y multiplicación responsable.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>📈 <strong>Actividades:</strong> Talleres de finanzas, desayunos de negocios y networking con propósito.</li>
+              <li>💼 <strong>Público:</strong> Emprendedores y empresarios del Llano.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20me%20interesa%20el%20Ministerio%20de%20Finanzas%20para%20empresarios" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Participar en Finanzas →
+          </a>
+        </div>
+
+        <!-- 3. Ministerio de Familias y Parejas -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">HOGARES SÓLIDOS</span>
+            <h3>Familias & Parejas</h3>
+            <span class="sub-program">Matrimonios Inseparables & Padres Primerizos</span>
+            <p style="margin-bottom: 16px;">
+              Herramientas reales para blindar el amor conyugal y transitar la paternidad. Incluye el programa insignia <strong>Matrimonios Inseparables</strong> y la guía especializada para <strong>Padres Primerizos</strong>.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>💍 <strong>Matrimonios Inseparables:</strong> Retiros y cenas románticas de renovación.</li>
+              <li>🍼 <strong>Padres Primerizos:</strong> Consejos de crianza con valores y apoyo entre parejas.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20queremos%20informaci%C3%B3n%20sobre%20el%20Ministerio%20de%20Familias%20y%20Parejas" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Conectar como Pareja/Familia →
+          </a>
+        </div>
+
+        <!-- 4. Kayros Juvenil -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">12 A 23 AÑOS</span>
+            <h3>Kayros Juvenil</h3>
+            <span class="sub-program">Adolescentes & Jóvenes</span>
+            <p style="margin-bottom: 16px;">
+              Una comunidad apasionada, llena de vida, música, creatividad y verdad. Diseñada para que jóvenes de 12 a 23 años descubran quiénes son en Dios y construyan amistades sanas que sumen a su vida.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>🎸 <strong>Actividades:</strong> Noches juveniles, campamentos, arte y dinámicas.</li>
+              <li>🔥 <strong>Ambiente:</strong> Cero religión aburrida, 100% Cristo y amigos.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20Kayros%20Juvenil" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Sumarme a Kayros Juvenil →
+          </a>
+        </div>
+
+        <!-- 5. Kayros Women -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">RED FEMENINA</span>
+            <h3>Kayros Women</h3>
+            <span class="sub-program">Mujeres con Propósito</span>
+            <p style="margin-bottom: 16px;">
+              Un espacio seguro donde cada mujer es empoderada en su valor espiritual, emocional y familiar. Círculos de diálogo, vulnerabilidad sincera, té de amigas y crecimiento en la fe.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>🌸 <strong>Actividades:</strong> Encuentros temáticos, grupos de oración y mentoría femenina.</li>
+              <li>✨ <strong>Enfoque:</strong> Sanidad interior, maternidad, liderazgo y paz.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20quiero%20unirme%20al%20ministerio%20Kayros%20Women" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Conectar con Kayros Women →
+          </a>
+        </div>
+
+        <!-- 6. Ministerio de Hombres -->
+        <div class="ministry-card">
+          <div>
+            <span class="badge-ministry">CARÁCTER & LIDERAZGO</span>
+            <h3>Ministerio de Hombres</h3>
+            <span class="sub-program">Hombres de Valor & Fe</span>
+            <p style="margin-bottom: 16px;">
+              Compañerismo real entre hombres para hablar con honestidad sobre carácter, paternidad, finanzas personales, pureza y liderazgo bíblico en el hogar y la sociedad.
+            </p>
+            <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>☕ <strong>Actividades:</strong> Desayunos de hombres, retos deportivos y charlas directas.</li>
+              <li>🛡️ <strong>Enfoque:</strong> Apoyo mutuo y responsabilidad sin máscaras.</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/573112819003?text=Hola,%20deseo%20participar%20en%20el%20Ministerio%20de%20Hombres" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Unirme a la Red de Hombres →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BANNER TEOSUPERACIÓN ================= -->
+  <section class="section" style="padding: 60px 0; background: #ffffff; border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+        <div style="max-width: 650px;">
+          <span class="eyebrow-pill" style="font-size: 0.75rem; margin-bottom: 10px;">FORMACIÓN TEOLÓGICA</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 8px;">¿Deseas profundizar tus conocimientos bíblicos?</h3>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">
+            Te invitamos a conocer <strong>Teosuperación</strong>, nuestra escuela de estudio teológico en 8 niveles. Clases gratuitas con guías oficiales de estudio desde $15.000 a $25.000 COP.
+          </p>
+        </div>
+        <div>
+          <a href="teosuperacion.html" class="btn btn-primary">Conocer Teosuperación →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BANNER FINAL DE ATENCIÓN DIRECTA ================= -->
+  <section class="section section-subtle">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <div class="eyebrow-pill">ATENCIÓN PERSONALIZADA</div>
+      <h2>¿Dudas sobre a cuál grupo o ministerio asistir?</h2>
+      <p style="margin-bottom: 26px;">
+        Nuestro equipo de coordinación pastoral y de grupos está disponible en WhatsApp para recomendarte el espacio perfecto según tu barrio y etapa de vida.
+      </p>
+      <a href="https://wa.me/573112819003?text=Hola%20Kayros%20Center,%20quisiera%20asesor%C3%ADa%20para%20encontrar%20mi%20grupo%20o%20ministerio" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        Hablar con el coordinador por WhatsApp ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo-white.png" alt="Kayros Center Blanco" class="footer-logo">
+          <p>Una comunidad contemporánea, bíblica y acogedora en Villavicencio, Colombia. Diseñada para que cada persona descubra su propósito en Dios.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="planifica-tu-visita.html">Planifica tu Visita</a></li>
+            <li><a href="teosuperacion.html">Teosuperación (Escuela)</a></li>
+            <li><a href="recursos.html">Centro de Recursos</a></li>
+            <li><a href="finanzas-biblicas.html">Finanzas Bíblicas</a></li>
+            <li><a href="grupos-conexion.html">Grupos de Conexión</a></li>
+            <li><a href="mensajes.html">Mensajes</a></li>
+            <li><a href="sedes.html">Familia Kayros (Sedes)</a></li>
+            <li><a href="dar.html">Generosidad / Dar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Horarios Villavicencio</h4>
+          <ul class="footer-links">
+            <li><strong>Jueves:</strong> 6:30 PM Oración · 7:30 PM Familiar</li>
+            <li><strong>Domingos:</strong> 8:30 AM Oración · 9:00 AM Kids</li>
+            <li><strong>Único Servicio:</strong> Domingos 9:30 AM</li>
+            <li><strong>Kayros Juvenil:</strong> Domingos 11:30 AM</li>
+            <li>C.C. Marandúa, Piso 3</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Línea de Conexión</h4>
+          <div class="footer-contact-item">
+            <span>📱</span>
+            <span>+57 311 2819003</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📷</span>
+            <span><a href="https://www.instagram.com/kayroscenter?igsh=MWQ1dmhtajc5YjBmZA%3D%3D" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Instagram @kayroscenter</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span>▶️</span>
+            <span><a href="https://www.youtube.com/channel/UCmTN4lxCbqbX1zjHZ8EuyYg" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Canal de YouTube</a></span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://wa.me/573112819003" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
+              Chat en WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Kayros Center. Todos los derechos reservados.</p>
+        <p>Grupos por Comunas & Ministerios Especializados en Villavicencio</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/573112819003" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">💬</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
