@@ -2078,6 +2078,34 @@ p {
   font-size: 0.92rem;
 }
 
+.footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.footer-contact-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.footer-icon-wa {
+  color: #25D366;
+}
+
+.footer-icon-ig {
+  color: #E1306C;
+}
+
+.footer-icon-yt {
+  color: #FF0000;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -2088,7 +2116,8 @@ p {
 }
 
 /* Botón flotante de WhatsApp */
-.floating-whatsapp {
+.floating-whatsapp,
+.whatsapp-float {
   position: fixed;
   bottom: 28px;
   right: 28px;
@@ -2106,7 +2135,16 @@ p {
   transition: var(--transition);
 }
 
-.floating-whatsapp:hover {
+.floating-whatsapp svg,
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  fill: #FFFFFF;
+}
+
+.floating-whatsapp:hover,
+.whatsapp-float:hover {
   transform: scale(1.08) translateY(-4px);
   background: var(--brand-whatsapp-hover);
 }
