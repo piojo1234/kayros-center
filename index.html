@@ -171,9 +171,45 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
-<body>
+<body class="intro-active">
+
+  <!-- ================= PANTALLA INTRODUCTORIA (PRELOADER 3 SEGUNDOS) ================= -->
+  <div class="intro-preloader" id="introPreloader" aria-label="Bienvenida a Kayros Center">
+    <div class="intro-ambient-glow"></div>
+    <div class="intro-content">
+      <!-- Isotipo Negro Girando en 3D -->
+      <div class="intro-logo-spin-wrap">
+        <div class="intro-logo-coin">
+          <div class="coin-face front">
+            <img src="assets/images/isotipo-dark.png" alt="Isotipo Kayros Center">
+          </div>
+          <div class="coin-face back">
+            <img src="assets/images/isotipo-dark.png" alt="Isotipo Kayros Center">
+          </div>
+        </div>
+        <div class="intro-logo-shadow"></div>
+      </div>
+
+      <!-- Mensaje: Bienvenidos a Casa -->
+      <h1 class="intro-welcome-title">Bienvenidos a Casa</h1>
+      <p class="intro-welcome-subtitle">Kayros Center · Una iglesia para pertenecer</p>
+
+      <!-- Banderas Ondeantes de Colombia y Chile -->
+      <div class="intro-flags-container">
+        <div class="intro-flag-item">
+          <canvas id="introFlagColombia" class="intro-flag-canvas" width="260" height="180"></canvas>
+          <span class="intro-flag-label">Colombia</span>
+        </div>
+        <div class="intro-flag-item">
+          <canvas id="introFlagChile" class="intro-flag-canvas" width="260" height="180"></canvas>
+          <span class="intro-flag-label">Chile</span>
+        </div>
+      </div>
+    </div>
+    <span class="intro-skip-hint">Clic para entrar</span>
+  </div>
 
   <!-- ================= HEADER / NAVEGACIÓN ================= -->
   <header class="site-header">
@@ -223,7 +259,7 @@
             <span>✦</span> BIENVENIDOS A CASA · C.C. MARANDÚA
           </div>
           
-          <h1>Un lugar donde puedes pertenecer antes de creer.</h1>
+          <h1>Comunidad Real para Todos</h1>
           
           <p class="hero-subtitle">
             No importa tu historia, tus dudas o de dónde vengas: en Kayros Center encuentras una comunidad real para caminar en los principios de Dios, crecer en propósito y conectar con personas que quieren crecer espiritualmente.
@@ -238,7 +274,61 @@
         </div>
       </div>
 
-      <!-- Para agregar más banners a futuro, duplicar el bloque .hero-slide con la nueva imagen y texto -->
+      <!-- Slide 2: Hito 28 Años de Gracia y Favor -->
+      <div class="hero-slide" data-slide-index="1">
+        <div class="hero-slide-media">
+          <picture>
+            <source srcset="assets/images/aniversario-28/hero-aniversario-celebracion.webp" type="image/webp">
+            <img src="assets/images/aniversario-28/hero-aniversario-celebracion.webp" alt="Celebración 28 Aniversario de Kayros Center" class="hero-bg-img">
+          </picture>
+          <div class="hero-slide-overlay"></div>
+        </div>
+        <div class="container hero-slide-content">
+          <div class="eyebrow-pill" style="background: linear-gradient(135deg, #d97706, #f59e0b); border: none; color: #fff;">
+            <span>✦</span> 28° ANIVERSARIO · GRACIA & FAVOR
+          </div>
+          
+          <h1>Casi tres décadas celebrando la fidelidad de Dios.</h1>
+          
+          <p class="hero-subtitle">
+            28 años transformando vidas, restaurando familias y formando una generación con propósito en Villavicencio, Colombia y Chile.
+          </p>
+
+          <div class="btn-group hero-actions">
+            <a href="planifica-tu-visita.html" class="btn btn-primary btn-pill">Conócenos este domingo</a>
+            <a href="#aniversario" class="btn btn-outline btn-pill">Ver momentos del 28° Aniversario</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Auditorio & Adoración Vibrante -->
+      <div class="hero-slide" data-slide-index="2">
+        <div class="hero-slide-media">
+          <picture>
+            <source srcset="assets/images/aniversario-28/hero-aniversario-auditorio.webp" type="image/webp">
+            <img src="assets/images/aniversario-28/hero-aniversario-auditorio.webp" alt="Auditorio y Danza en Kayros Center Villavicencio" class="hero-bg-img">
+          </picture>
+          <div class="hero-slide-overlay"></div>
+        </div>
+        <div class="container hero-slide-content">
+          <div class="eyebrow-pill">
+            <span>✦</span> EXPERIENCIA VIBRANTE · C.C. MARANDÚA
+          </div>
+          
+          <h1>Adoración contemporánea, calidez y solidez bíblica.</h1>
+          
+          <p class="hero-subtitle">
+            Un espacio donde la excelencia musical, la danza y la predicación contextual se unen para conectar tu corazón con Dios los jueves 7:00 PM y domingos 9:00 AM.
+          </p>
+
+          <div class="btn-group hero-actions">
+            <a href="planifica-tu-visita.html" class="btn btn-primary btn-pill">Planear mi visita</a>
+            <a href="https://wa.me/573143822103?text=Hola%20Kayros%20Center,%20quiero%20conocerlos%20este%20fin%20de%20semana" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-pill">
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Controles del Slider (Preparados dinámicamente) -->
@@ -601,6 +691,91 @@
             <span class="specialty-pill">✦ Teología Ministerial Pentecostal (SBAD)</span>
             <span class="specialty-pill">✦ Matrimonios Inseparables</span>
             <span class="specialty-pill">✦ Consejería y Sanidad Interior</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDA & CELEBRACIÓN: 28° ANIVERSARIO ================= -->
+  <section class="section section-subtle anniversary-gallery-section" id="aniversario">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow-pill"><span>✦</span> 28° ANIVERSARIO · GRACIA & FAVOR</div>
+        <h2>Vida, Celebración & Fe en Comunidad</h2>
+        <p>Una muestra de los momentos inolvidables vividos en nuestro 28° Aniversario: adoración sincera, familias unidas, gozo en los niños y una iglesia viva que avanza con gratitud.</p>
+      </div>
+
+      <div class="gallery-clean-grid">
+        <!-- Foto 1: Adoración Sincera -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/comunidad-adoracion.webp" alt="Adoración comunitaria en Kayros Center" loading="lazy" width="600" height="400">
+            <div class="gallery-badge">Adoración</div>
+          </div>
+          <div class="gallery-info">
+            <h4>Comunidad en Adoración</h4>
+            <p>Corazones sinceros conectados con Dios en un ambiente de libertad y alabanza.</p>
+          </div>
+        </article>
+
+        <!-- Foto 2: Torta Aniversario 28 -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/torta-aniversario-28.webp" alt="Celebración del 28 Aniversario Kayros Center" loading="lazy" width="600" height="400">
+            <div class="gallery-badge badge-gold">28 Años</div>
+          </div>
+          <div class="gallery-info">
+            <h4>28 Años de Fidelidad</h4>
+            <p>Celebrando la gracia de Dios a lo largo de casi tres décadas de ministerio.</p>
+          </div>
+        </article>
+
+        <!-- Foto 3: Kayros Kids -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/kayros-kids-danza.webp" alt="Niños y formación en Kayros Kids" loading="lazy" width="600" height="400" style="object-position: center 18%;">
+            <div class="gallery-badge">Kayros Kids</div>
+          </div>
+          <div class="gallery-info">
+            <h4>Semillero de Fe y Alegría</h4>
+            <p>Nuestros niños creciendo con principios bíblicos, valores y talentos.</p>
+          </div>
+        </article>
+
+        <!-- Foto 4: Warriors & Juventud -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/warriors-jovenes-danza.webp" alt="Juventud y Warriors Kayros Center" loading="lazy" width="600" height="400">
+            <div class="gallery-badge">Warriors</div>
+          </div>
+          <div class="gallery-info">
+            <h4>Jóvenes con Propósito</h4>
+            <p>Una generación apasionada que impacta la sociedad con su testimonio.</p>
+          </div>
+        </article>
+
+        <!-- Foto 5: Pastores Diana y Mauricio -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/pastores-celebracion-iglesia.webp" alt="Pastores Principales Mauricio y Diana en el 28 Aniversario" loading="lazy" width="600" height="400">
+            <div class="gallery-badge">Liderazgo</div>
+          </div>
+          <div class="gallery-info">
+            <h4>Cuidado Pastoral Cercano</h4>
+            <p>Pastores dedicados a orar, guiar y edificar con solidez y empatía.</p>
+          </div>
+        </article>
+
+        <!-- Foto 6: Comunidad y Conexión -->
+        <article class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/images/aniversario-28/comunidad-desayuno-conexion.webp" alt="Desayuno de confraternidad y grupos de conexión" loading="lazy" width="600" height="400">
+            <div class="gallery-badge">Comunión</div>
+          </div>
+          <div class="gallery-info">
+            <h4>Compartiendo la Mesa</h4>
+            <p>Amistades reales que se consolidan en la vida cotidiana de la comunidad.</p>
           </div>
         </article>
       </div>

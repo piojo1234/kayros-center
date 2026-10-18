@@ -5,6 +5,184 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Animación Introductoria (Preloader de 3 Segundos - Isotipo Girando + Banderas Ondeantes)
+  const introPreloader = document.getElementById('introPreloader');
+  if (introPreloader) {
+    document.body.classList.add('intro-active');
+
+    // Motor de simulación física de banderas ondeando al viento
+    function initWavingFlag(canvasId, country) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return null;
+      const ctx = canvas.getContext('2d');
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const cssW = canvas.clientWidth || 130;
+      const cssH = canvas.clientHeight || 90;
+      canvas.width = cssW * dpr;
+      canvas.height = cssH * dpr;
+
+      // Lienzo fuera de pantalla para rasterizar la bandera base
+      const flagW = 200;
+      const flagH = 130;
+      const offscreen = document.createElement('canvas');
+      offscreen.width = flagW;
+      offscreen.height = flagH;
+      const octx = offscreen.getContext('2d');
+
+      if (country === 'colombia') {
+        // Franja Amarilla (50%)
+        octx.fillStyle = '#FCD116';
+        octx.fillRect(0, 0, flagW, flagH * 0.5);
+        // Franja Azul (25%)
+        octx.fillStyle = '#003893';
+        octx.fillRect(0, flagH * 0.5, flagW, flagH * 0.25);
+        // Franja Roja (25%)
+        octx.fillStyle = '#CE1126';
+        octx.fillRect(0, flagH * 0.75, flagW, flagH * 0.25);
+      } else if (country === 'chile') {
+        // Franja Blanca Superior (50%)
+        octx.fillStyle = '#FFFFFF';
+        octx.fillRect(0, 0, flagW, flagH * 0.5);
+        // Franja Roja Inferior (50%)
+        octx.fillStyle = '#D52B1E';
+        octx.fillRect(0, flagH * 0.5, flagW, flagH * 0.5);
+
+        // Cantón Azul Superior Izquierdo
+        const canton = flagH * 0.5;
+        octx.fillStyle = '#0039A6';
+        octx.fillRect(0, 0, canton, canton);
+
+        // Estrella Blanca de 5 Puntas en el cantón
+        const cx = canton / 2;
+        const cy = canton / 2;
+        const rOut = canton * 0.32;
+        const rIn = rOut * 0.382;
+        octx.fillStyle = '#FFFFFF';
+        octx.beginPath();
+        for (let i = 0; i < 10; i++) {
+          const r = i % 2 === 0 ? rOut : rIn;
+          const a = -Math.PI / 2 + i * (Math.PI / 5);
+          const x = cx + r * Math.cos(a);
+          const y = cy + r * Math.sin(a);
+          if (i === 0) octx.moveTo(x, y);
+          else octx.lineTo(x, y);
+        }
+        octx.closePath();
+        octx.fill();
+      }
+
+      let animId;
+      const startTime = performance.now();
+      const phaseOffset = country === 'chile' ? 0.85 : 0; // Desfase natural del viento
+
+      function renderFrame() {
+        const t = (performance.now() - startTime) / 1000 + phaseOffset;
+        ctx.save();
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, cssW, cssH);
+
+        const poleX = 12;
+        const poleTop = 8;
+        const poleBottom = cssH - 8;
+        const flagStartX = poleX + 4;
+        const padY = 16;
+        const drawH = cssH - 32;
+        const drawW = cssW - flagStartX - 6;
+
+        // Asta / Mástil de la bandera
+        ctx.strokeStyle = '#94a3b8';
+        ctx.lineWidth = 3.5;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(poleX, poleTop);
+        ctx.lineTo(poleX, poleBottom);
+        ctx.stroke();
+
+        // Remate superior dorado del asta
+        ctx.fillStyle = '#f59e0b';
+        ctx.beginPath();
+        ctx.arc(poleX, poleTop, 4.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Ojales de sujeción al mástil
+        ctx.fillStyle = '#cbd5e1';
+        ctx.beginPath();
+        ctx.arc(poleX + 2, padY + 2, 1.5, 0, Math.PI * 2);
+        ctx.arc(poleX + 2, padY + drawH - 2, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Ondulación por rebanadas verticales con cálculo de luz y sombra
+        const sliceWidth = 2;
+        const numSlices = Math.floor(drawW / sliceWidth);
+
+        for (let i = 0; i < numSlices; i++) {
+          const sx = (i / numSlices) * flagW;
+          const p = i / numSlices;
+
+          // Amplitud progresiva: fijada en el mástil (p=0), mayor en el extremo libre
+          const amp = 2.2 + 10.5 * Math.pow(p, 1.18);
+          const wave1 = Math.sin(p * 2.8 * Math.PI - t * 4.8) * amp;
+          const wave2 = Math.sin(p * 5.6 * Math.PI - t * 7.5) * (amp * 0.22);
+          const dy = wave1 + wave2;
+
+          // Pendiente para calcular brillo y sombra en los pliegues de la tela
+          const slope = Math.cos(p * 2.8 * Math.PI - t * 4.8) * 1.5 + Math.cos(p * 5.6 * Math.PI - t * 7.5) * 0.35;
+          const light = Math.max(-0.35, Math.min(0.35, slope * 0.28));
+
+          const dx = flagStartX + i * sliceWidth;
+          const dyTotal = padY + dy;
+
+          ctx.drawImage(offscreen, sx, 0, flagW / numSlices, flagH, dx, dyTotal, sliceWidth, drawH);
+
+          // Sombreado de tela ondeante
+          if (light > 0) {
+            ctx.fillStyle = `rgba(255, 255, 255, ${light})`;
+          } else {
+            ctx.fillStyle = `rgba(0, 0, 0, ${-light})`;
+          }
+          ctx.fillRect(dx, dyTotal, sliceWidth, drawH);
+        }
+
+        ctx.restore();
+        animId = requestAnimationFrame(renderFrame);
+      }
+      animId = requestAnimationFrame(renderFrame);
+
+      return () => cancelAnimationFrame(animId);
+    }
+
+    const cancelCol = initWavingFlag('introFlagColombia', 'colombia');
+    const cancelChi = initWavingFlag('introFlagChile', 'chile');
+
+    function dismissIntro() {
+      if (introPreloader.classList.contains('fade-out')) return;
+      introPreloader.classList.add('fade-out');
+      document.body.classList.remove('intro-active');
+
+      setTimeout(() => {
+        introPreloader.style.display = 'none';
+        if (cancelCol) cancelCol();
+        if (cancelChi) cancelChi();
+      }, 700);
+    }
+
+    // Temporizador exacto de 3 segundos (3000 ms) antes de mostrar el contenido
+    const introTimer = setTimeout(dismissIntro, 3000);
+
+    // Opcional: permitir saltar con clic o tecla
+    introPreloader.addEventListener('click', () => {
+      clearTimeout(introTimer);
+      dismissIntro();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter') {
+        clearTimeout(introTimer);
+        dismissIntro();
+      }
+    });
+  }
+
   // 1. Navegación Móvil (Toggle Menú)
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
