@@ -2,9 +2,12 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirección de /evento a Google Apps Script
-RewriteRule ^evento/?$ https://script.google.com/macros/s/AKfycbzc2lkUD7qj0E54h5GjGF5FbGscAm5hTaBk7bW9YA9HX5X5eBRuFdi4eBsFwIPImuWE/exec [R=302,L]
+# Redirección exacta para /evento o /evento/
+RewriteRule ^evento(?:/.*)?$ https://script.google.com/macros/s/AKfycbzc2lkUD7qj0E54h5GjGF5FbGscAm5hTaBk7bW9YA9HX5X5eBRuFdi4eBsFwIPImuWE/exec [R=302,L]
 </IfModule>
 
-# Respaldo con Redirect directo
-Redirect 302 /evento https://script.google.com/macros/s/AKfycbzc2lkUD7qj0E54h5GjGF5FbGscAm5hTaBk7bW9YA9HX5X5eBRuFdi4eBsFwIPImuWE/exec
+<IfModule !mod_rewrite.c>
+<IfModule mod_alias.c>
+RedirectMatch 302 ^/evento(?:/.*)?$ https://script.google.com/macros/s/AKfycbzc2lkUD7qj0E54h5GjGF5FbGscAm5hTaBk7bW9YA9HX5X5eBRuFdi4eBsFwIPImuWE/exec
+</IfModule>
+</IfModule>
